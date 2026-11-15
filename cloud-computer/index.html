@@ -24,7 +24,7 @@
     <a id="open" href="./destination.html">Open workspace →</a>
   </main>
   <script>
-    fetch('./destination.html', { cache: 'no-store' })
+    fetch('./destination.html?updated=' + Date.now(), { cache: 'no-store' })
       .then((response) => {
         if (!response.ok) throw new Error('Workspace address unavailable');
         return response.text();
